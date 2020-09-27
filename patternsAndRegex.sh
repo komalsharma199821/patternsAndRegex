@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -x
 #1#
 
 read -p "Enter your first Name : " name
@@ -48,6 +48,19 @@ fi
 
 read -p "Enter your 8-digit password : " password
 pat='[a-zA-Z0-9.@*!]{8,}';
+
+if [[ $password =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "Please Enter a Valid Password";
+fi
+
+
+#6#
+
+read -p "Enter your 8-digit password : " password
+pat='^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$';
 
 if [[ $password =~ $pat ]]
 then
