@@ -10,3 +10,14 @@ then
 else
         echo "no";
 fi
+#2#
+
+read -p "Enter your Last Name : " Lname
+pat="^[A-Z][a-z]{2,}$";
+
+if [[ $Lname =~ $pat ]]
+then
+        echo "yes";
+else
+        echo "no";
+fi
