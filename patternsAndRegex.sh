@@ -21,7 +21,7 @@ then
 else
         echo "no";
 fi
-#!/bin/bash -x
+#3#
 
 read -p "Enter your Email Address : " email
 pat='^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$';
@@ -31,4 +31,15 @@ then
         echo "Yes Pattern Matched Successfully !";
 else
         echo "PLease Enter a Valid Email Address";
+fi
+
+#4#
+read -p "Enter your mobile Number : " mob
+pat='^[+]?([0-9]{2,3})?[0-9]{10}$';
+
+if [[ $mob =~ $pat ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "PLease Enter a Valid Mobile Number";
 fi
