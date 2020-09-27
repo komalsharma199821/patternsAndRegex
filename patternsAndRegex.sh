@@ -95,3 +95,15 @@ else
         echo "Please Enter a Valid Password";
 
 
+#9#
+
+read -p "Enter your Email Address : " email
+pat='^\w+([\+.-]?\w+)*@\w+([\.-]?\w+)*(\.[a-z]{2,3})+$';
+
+if [[ "$email" =~ "$pat" ]]
+then
+        echo "Yes Pattern Matched Successfully !";
+else
+        echo "PLease Enter a Valid Email Address";
+fi
+
